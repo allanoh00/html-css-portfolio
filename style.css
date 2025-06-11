@@ -54,43 +54,36 @@ a:hover{
 .logo{
     font-size: 2.5em;
     font-family: 'FOGIE REGULAR';
-    border: green 4px solid;
-    padding: 0.05em .2em;
+    
 }
-logo:hover{
+.logo:hover{
     cursor: default;
 }
-/*humburger menu*/
-#humburger-nav{
+/*hamburger menu*/
+#hamburger-nav{
     display: none;
-    /*flex-direction: column;
-    justify-content: space-around;
-    width: 2em;
-    height: 2em;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;*/
+
 }
-.humburger-menu{
+.hamburger-menu{
     position: relative;
     display: inline-block;
 }
-.humburger-icon{
+.hamburger-icon{
     display: flex;
-    flex-direction: flex;
+    flex-direction: column;
     justify-content: space-between;
     height: 24px;
     width: 30px;
     cursor: pointer;
 }
-.humburger-icon span{
+.hamburger-icon span{
     width: 100%;
     height: 2px;
     background-color: rgb(107, 110, 112);
     transition: all 0.3s ease-in-out;
 }
 .menu-links{
-     position: absolute9;
+     position: absolute;
      top: 100%;
      right: 0;
      background-color: rgb(255, 255, 255);
@@ -115,6 +108,219 @@ logo:hover{
 .menu-links.open{
     max-height: 300px; /* Adjust this value based on the number of items */
 }
-.humburger-icon.open span:first-child{
-    transform: rotate(45deg) translate(10px, 5dpx);
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+.hamburger-icon span:first-child{
+   transform: none;
+}
+.hamburger-icon span:first-child{
+   opacity: 1;
+}
+.hamburger-icon span:first-child{
+   transform: none;
+}
+
+section {
+    
+    padding-top: 2vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display:flex;
+}
+.profile-pic{
+    width: 400px;
+    height: 400px;
+}
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+    object-fit: contain;
+}
+.section__pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+
+}
+.section__text{
+    align-self: center;
+    text-align: center;
+}
+.section__text__p1{
+    text-align: center;
+}
+.section__text p{
+    font-weight: 600;
+}
+.section__text__p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+.btn-color-1,
+.btn-color-2{
+    background-color: hwb(0 33% 67%);
+    font-family: cursive;
+}
+.btn-color-1:hover,
+.btn-color-2:hover{
+    background-color: rgba(87, 86, 86, 0.5);
+    color:rgb(214, 245, 245);
+    cursor: pointer;
+}
+.btn-color-1,
+.btn-color-2:hover{
+    background: hwb(0 19% 81%);
+    color: white;
+}
+.btn-color-1:hover{
+    background: rgb(0 0 0);
+}
+.btn-color-2{
+    background: none; 
+}
+.btn-color-2:hover{
+    border: rgb(93, 134, 224) 0.1rem solid 2px;)
+}
+.btn-container{
+    gap: 1rem;
+}
+/* about me section */
+#about{
+    position: relative;
+}
+.about-containers{
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+.about-containers,
+.about-details-container{
+display: flex;
+}
+.about-pic{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.arrow{
+    position: absolute;
+    right: -5rem;
+}
+.details-container{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: .5rem;
+    border: rgb(53,53,53) 0.1rem solid;
+    border-color: rgb(226, 132, 24);
+}
+.section-container{
+    gap: 4rem;
+    height: 80%;    
+}
+.section__pic-container{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+.experience-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+#experience{
+    position: relative;
+}
+.experience-subtitle{
+    justify-items: center;
+    color: rgb(233, 231, 226);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    line-height: 20px;
+}
+.experience-details-container{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+    
+}
+.article-container{
+    display: flex;
+    text-wrap: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+article{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article.icon{
+    cursor: default;
+}
+#projects{
+    position: relative;
+}
+.color-container{
+    border-color: rgb(143,143,143);
+    background: rgb(250,250,250);
+}
+.project-img{
+    border-radius: 2rem;
+}
+.project-btn{
+    color: black;
 }
